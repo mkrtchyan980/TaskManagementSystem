@@ -1,0 +1,787 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  transition: 500ms;
+}
+
+#conts {
+  display: flex;
+  justify-content: flex-end;
+}
+#conts #aside {
+  width: 5%;
+  height: 100vh;
+  border-right: 0.5px solid #d6d6d6;
+  position: fixed;
+  left: 0;
+  padding: 10px;
+  overflow: hidden;
+  transition: 500ms;
+  background-color: #fff;
+  z-index: 1;
+}
+#conts #aside:hover {
+  width: 20%;
+  overflow: hidden;
+}
+#conts #aside #navCont {
+  display: flex;
+}
+#conts #aside #navCont #navLeft {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+#conts #aside #navCont #navLeft .title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 15px 15px 0;
+}
+#conts #aside #navCont #navLeft .title .icon {
+  color: #603ecc;
+  font-size: 30px;
+  transform: rotate(30deg);
+}
+#conts #aside #navCont #navLeft .menu {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+}
+#conts #aside #navCont #navLeft .menu .menuList :hover {
+  background-color: #f1f1f1;
+}
+#conts #aside #navCont #navLeft .menu .menuList a {
+  border-radius: 5px;
+  transition: 0.5s;
+  display: flex;
+  padding: 15px 0 15px 10px;
+  align-items: center;
+  gap: 10px;
+  color: #6b6e71;
+  text-decoration: none;
+}
+#conts #aside #navCont #navLeft .menu .menuList a .icon {
+  font-size: 20px;
+}
+#conts #aside #navCont #mainNav {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+#conts #aside #navCont #mainNav .logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 15px 15px 10px;
+}
+#conts #aside #navCont #mainNav .logo .icon {
+  color: #603ecc;
+  font-size: 30px;
+  transform: rotate(30deg);
+}
+#conts #aside #navCont #mainNav .menu {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+}
+#conts #aside #navCont #mainNav .menu .menuList .icon {
+  font-size: 20px;
+  color: #6b6e71;
+  padding: 15px 0 9px 10px;
+}
+#conts #header {
+  width: 95%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: fixed;
+  background-color: #fff;
+  border-bottom: 0.5px solid #d6d6d6;
+}
+#conts #header #nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+#conts #header #nav .menu {
+  width: 45%;
+  list-style: none;
+}
+@media screen and (max-width: 500px) {
+  #conts #header #nav .menu {
+    width: 30%;
+  }
+}
+#conts #header #nav .menu .menuList input {
+  border-radius: 5px;
+  padding: 7px 20px;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #ededed;
+}
+#conts #header #nav .logo h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #6b6e71;
+  text-decoration: none;
+  font-weight: 500;
+}
+@media screen and (max-width: 500px) {
+  #conts #header #nav .logo h3 {
+    font-size: 16px;
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #conts #header #nav .logo h3 {
+    font-size: 14px;
+  }
+}
+#conts #header #nav .cont {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 500px) {
+  #conts #header #nav .cont {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 350px) {
+  #conts #header #nav .cont {
+    gap: 10px;
+  }
+}
+#conts #header #nav .cont .menuList {
+  list-style: none;
+  font-size: 25px;
+  color: #6b6e71;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  #conts #header #nav .cont .menuList {
+    font-size: 20px;
+  }
+}
+#conts #header #nav .cont .menuList #dropdownMenuAdd {
+  min-width: 250px;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  #conts #header #nav .cont .menuList #dropdownMenuAdd {
+    min-width: 220px;
+  }
+}
+#conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+#conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+#conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList a li {
+  list-style: disc;
+  color: #6b6e71;
+}
+#conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList p {
+  font-size: 13px;
+  padding: 2px 0;
+}
+#conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList p span {
+  color: #603ecc;
+}
+#conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList .icon {
+  font-size: 20px;
+  padding: 7px;
+  color: #603ecc;
+  background-color: #f3f1f9;
+  border-radius: 50%;
+}
+#conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+#conts #header #nav .cont .menuList #dropdownMenuAdd button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
+#conts #header #nav .cont .menuList #dropdownMenuAdd button a {
+  color: #6b6e71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot {
+  min-width: 300px;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  #conts #header #nav .cont .menuList #dropdownMenuNot {
+    min-width: 280px;
+  }
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot .line {
+  width: 100%;
+  border: 1px solid #d6d6d6;
+  margin: 10px 0;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .info a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .info a li {
+  list-style: disc;
+  color: #6b6e71;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .info p {
+  font-size: 13px;
+  padding: 2px 0;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .info p span {
+  color: #603ecc;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .icons {
+  font-size: 23px;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .icon {
+  font-size: 20px;
+  padding: 7px;
+  color: #603ecc;
+  background-color: #f3f1f9;
+  border-radius: 50%;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
+#conts #header #nav .cont .menuList #dropdownMenuNot button a {
+  color: #6b6e71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+#conts #header #nav .cont .menuList #dropdownMenu {
+  min-width: 250px;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  display: none;
+}
+#conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+#conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+#conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList a li {
+  list-style: disc;
+  color: #6b6e71;
+}
+#conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList p {
+  font-size: 13px;
+  padding: 2px 0;
+}
+#conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList p span {
+  color: #603ecc;
+}
+#conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList .icon {
+  font-size: 20px;
+  padding: 7px;
+  color: #603ecc;
+  background-color: #f3f1f9;
+  border-radius: 50%;
+}
+#conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+#conts #header #nav .cont .menuList #dropdownMenu button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
+#conts #header #nav .cont .menuList #dropdownMenu button a {
+  color: #6b6e71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+#conts #section {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+@media screen and (max-width: 885px) {
+  #conts #section {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  #conts #section {
+    flex-direction: column;
+    padding: 20px;
+    margin: 60px 0;
+    gap: 10px;
+  }
+}
+#conts #section .settingsIcon {
+  display: none;
+}
+#conts #section .settingsIcon #setIcon {
+  font-size: 30px;
+  color: #6b6e71;
+}
+@media screen and (max-width: 550px) {
+  #conts #section .settingsIcon #setIcon {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #conts #section .settingsIcon {
+    display: block;
+  }
+}
+#conts #section #settingsMenu {
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px 10px 50px 10px;
+  background-color: #fff;
+}
+@media screen and (max-width: 700px) {
+  #conts #section #settingsMenu {
+    width: 40%;
+    height: 100%;
+    display: none;
+    border: 1px solid #d6d6d6;
+    position: fixed;
+    left: 0;
+    top: 60px;
+  }
+}
+@media screen and (max-width: 570px) {
+  #conts #section #settingsMenu {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 440px) {
+  #conts #section #settingsMenu {
+    width: 65%;
+  }
+}
+#conts #section #settingsMenu .info {
+  padding-left: 10px;
+}
+@media screen and (max-width: 700px) {
+  #conts #section #settingsMenu .info {
+    display: none;
+  }
+}
+#conts #section #settingsMenu .info p {
+  font-size: 15px;
+  color: #6b6e71;
+  padding: 10px 0;
+}
+#conts #section #settingsMenu .closeIcon {
+  text-align: end;
+  display: none;
+}
+#conts #section #settingsMenu .closeIcon #closeIcon {
+  font-size: 20px;
+  color: #6b6e71;
+}
+@media screen and (max-width: 700px) {
+  #conts #section #settingsMenu .closeIcon {
+    display: block;
+  }
+}
+#conts #section #settingsMenu ul {
+  width: 90%;
+  padding-top: 10px;
+}
+#conts #section #settingsMenu ul li {
+  list-style: none;
+}
+#conts #section #settingsMenu ul li :hover {
+  background-color: #f1f1f1;
+}
+#conts #section #settingsMenu ul li a {
+  border-radius: 5px;
+  transition: 0.5s;
+  display: flex;
+  padding: 15px 0 15px 10px;
+  align-items: center;
+  gap: 10px;
+  color: #6b6e71;
+  text-decoration: none;
+}
+#conts #section #settingsMenu ul li a .icon {
+  font-size: 20px;
+}
+#conts #section .generalSettingsCont {
+  width: 65%;
+}
+@media screen and (max-width: 700px) {
+  #conts #section .generalSettingsCont {
+    width: 100%;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild {
+  width: 100%;
+  border: 0.5px solid #d6d6d6;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 510px) {
+  #conts #section .generalSettingsCont .generalSettingsChild {
+    padding: 15px 10px;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild .line {
+  width: 100%;
+  border: 0.5px solid #d6d6d6;
+  margin: 15px 0;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .personalDetalisIcon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 400px) {
+  #conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .personalDetalisIcon {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .personalDetalisIcon .icon {
+  font-size: 100px;
+  color: #b674fd;
+}
+@media screen and (max-width: 600px) {
+  #conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .personalDetalisIcon .icon {
+    font-size: 85px;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .personalDetalisIcon .btn button {
+  background-color: #eee9fd;
+  color: #6f47eb;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .personalDetalisIcon .btn button .icons {
+  font-size: 18px;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+@media screen and (max-width: 400px) {
+  #conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form {
+    flex-direction: column;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form .formChild {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 520px) {
+  #conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form .formChild {
+    width: 100%;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form .formChild label {
+  font-size: 15px;
+  color: #6b6e71;
+  padding: 10px 0;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form .formChild input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 0.5px solid #d6d6d6;
+  outline: none;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form .formChildTwo {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 520px) {
+  #conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form .formChildTwo {
+    width: 100%;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form .formChildTwo label {
+  font-size: 15px;
+  color: #6b6e71;
+  padding: 10px 0;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form .formChildTwo .formChildInput {
+  display: flex;
+  border: 0.5px solid #d6d6d6;
+  border-radius: 5px;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form .formChildTwo .formChildInput p {
+  border-radius: 5px 0 0 5px;
+  font-size: 13px;
+  background-color: #f1f1f1;
+  padding: 10px 15px;
+  color: #6b6e71;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm form .formChildTwo .formChildInput input {
+  outline: none;
+  width: 50%;
+  border: none;
+  padding-left: 10px;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .note {
+  width: 100%;
+  margin-top: 20px;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .note p {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  color: #6b6e71;
+  font-size: 14px;
+  padding: 15px 10px;
+}
+@media screen and (max-width: 550px) {
+  #conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .note p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .note .btn {
+    width: 100%;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .note .btn button {
+  display: flex;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid black;
+  transition: 0.5s;
+  font-size: 15px;
+}
+#conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .note .btn button:hover {
+  background-color: #5c5f62;
+  border: 1px solid #5c5f62;
+}
+@media screen and (max-width: 520px) {
+  #conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .note .btn button {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #conts #section .generalSettingsCont .generalSettingsChild .personalDetalisForm .note .btn button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild form .formChilds {
+  margin-top: 20px;
+}
+#conts #section .generalSettingsCont .generalSettingsChild form .formChilds label {
+  font-size: 15px;
+  color: #6b6e71;
+}
+#conts #section .generalSettingsCont .generalSettingsChild form .formChilds .formInput {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+}
+@media screen and (max-width: 400px) {
+  #conts #section .generalSettingsCont .generalSettingsChild form .formChilds .formInput {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild form .formChilds .formInput input {
+  width: 48%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 0.5px solid #d6d6d6;
+  outline: none;
+}
+@media screen and (max-width: 400px) {
+  #conts #section .generalSettingsCont .generalSettingsChild form .formChilds .formInput input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  #conts #section .generalSettingsCont .generalSettingsChild form .formChilds .formInput .btn {
+    width: 100%;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild form .formChilds .formInput .btn button {
+  display: flex;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: 0.5s;
+  font-size: 15px;
+}
+#conts #section .generalSettingsCont .generalSettingsChild form .formChilds .formInput .btn button:hover {
+  background-color: #5c5f62;
+  border: 1px solid #5c5f62;
+}
+@media screen and (max-width: 520px) {
+  #conts #section .generalSettingsCont .generalSettingsChild form .formChilds .formInput .btn button {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #conts #section .generalSettingsCont .generalSettingsChild form .formChilds .formInput .btn button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild form .formChilds .note {
+  width: 65%;
+  margin-top: 20px;
+}
+@media screen and (max-width: 550px) {
+  #conts #section .generalSettingsCont .generalSettingsChild form .formChilds .note {
+    width: 100%;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild form .formChilds .note p {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  color: #6b6e71;
+  font-size: 14px;
+  padding: 15px 10px;
+}
+@media screen and (max-width: 550px) {
+  #conts #section .generalSettingsCont .generalSettingsChild form .formChilds .note p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 440px) {
+  #conts #section .generalSettingsCont .generalSettingsChild form .formChilds .note .btn {
+    width: 100%;
+  }
+}
+#conts #section .generalSettingsCont .generalSettingsChild form .formChilds .note .btn button {
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  transition: 0.5s;
+  font-size: 15px;
+}
+#conts #section .generalSettingsCont .generalSettingsChild form .formChilds .note .btn button:hover {
+  background-color: #5c5f62;
+}
+@media screen and (max-width: 520px) {
+  #conts #section .generalSettingsCont .generalSettingsChild form .formChilds .note .btn button {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 440px) {
+  #conts #section .generalSettingsCont .generalSettingsChild form .formChilds .note .btn button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=generalsettings.css.map */

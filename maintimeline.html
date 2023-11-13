@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="css/maintimeLine.css">
+        <title>Task Management System</title>
+    </head>
+    <body>
+        <div id="conts">
+            <aside id="aside">
+                <div id="navCont">
+                    <nav id="mainNav">
+                        <div class="logo">
+                            <ion-icon name="flash-outline" class="icon"></ion-icon>
+                        </div>
+                        <ul class="menu">
+                            <li class="menuList">
+                                <ion-icon name="home-outline" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="analytics" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="people-outline" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="albums-outline" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="chatbox-outline" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="calendar-clear-outline" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="grid-outline" class="icon"></ion-icon>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav id="navLeft">
+                        <div class="title">
+                            <h3>Superpage</h3>
+                        </div>
+                        <ul class="menu">
+                            <li class="menuList">
+                                <a href="homePage.html">Home</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="dashboard.html">Dashboard</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="myTeam.html">Teams</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="board.html">Boards</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="inbox.html">Inbox</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="timeline.html">Timeline</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="options.html">More Options</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>  
+            <header id="header">
+                <nav id="nav">
+                    <div class="logo">
+                        <h3>
+                            <ion-icon name="chevron-back-outline" id="mainIcon"></ion-icon
+                                >Timeline
+                            </h3>
+                        </div>
+                        <ul class="menu">
+                            <li class="menuList">
+                                <input type="search" placeholder="Search..." />
+                            </li>
+                        </ul>
+                        <div class="cont">
+                            <li class="menuList">
+                                <i class="material-icons" id="addIcon"> add_circle_outline</i>
+                                <ul id="dropdownMenuAdd">
+                                    <li class="dropdownMenuList">
+                                        <i class="material-icons icon"> check_box</i>
+                                        <div class="info">
+                                            <a href="#">Create Task</a>
+                                            <p>Create your tasks now</p>
+                                        </div>
+                                    </li>
+                                    <li class="dropdownMenuList">
+                                        <i class="material-icons icon">group</i>
+                                    <div class="info">
+                                        <a href="myTeam.html">Create Team</a>
+                                        <p>Create your team now</p>
+                                    </div>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <ion-icon name="albums-outline" class="icon"></ion-icon>
+                                    <div class="info">
+                                        <a href="board.html">Create Board</a>
+                                        <p>Create your board now</p>
+                                    </div>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <i class="material-icons icon">calendar_today</i>
+                                    <div class="info">
+                                        <a href="timeline.html">Create Timeline</a>
+                                        <p>Create your timeline now</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menuList">
+                            <ion-icon name="notifications-outline" id="notificationsIcon"></ion-icon>
+                            <ul id="dropdownMenuNot">
+                                <h5>Notification</h5>
+                                <div class="line"></div>
+                                <li class="dropdownMenuList">
+                                    <i class="material-icons icon">done</i>
+                                    <ul class="info">
+                                        <a href="#">Team Task Completed<li>Now</li></a>
+                                        <p>Johson comlpete <span>Development te...</span></p>
+                                    </ul>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <i class="material-icons icon">person_add</i>
+                                    <ul class="info">
+                                        <a href="#">Join Request<li>2h</li></a>
+                                        <p>Johson comlpete <span>Development te...</span></p>
+                                    </ul>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <i class="material-icons icon">person</i>
+                                    <ul class="info">
+                                        <a href="#">Accepted Team Request<li>1d</li></a>
+                                        <p>Johson comlpete <span>Development te...</span></p>
+                                    </ul>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <i class="material-icons icon">insert_drive_file</i>
+                                    <ul class="info">
+                                        <a href="#">Your Monthly Report<li>1w</li></a>
+                                        <p>Johson comlpete <span>Development te...</span></p>
+                                    </ul>
+                                </li>
+                                <button><a href="notification.html">See all <ion-icon name="chevron-forward-outline"></ion-icon></a></button>
+                            </ul>
+                        </li>
+                        <li class="menuList">
+                            <ion-icon name="person-circle-outline" id="personIcon"></ion-icon>
+                            <ul id="dropdownMenu">
+                                <li class="dropdownMenuList">
+                                    <ion-icon name="person-circle-outline" class="icons"></ion-icon>
+                                    <a href="profile.html">My Profile</a>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <ion-icon name="help-circle-outline" class="icons"></ion-icon>
+                                    <a href="help.html">Help and Support</a>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <ion-icon name="person-add-outline" class="icons"></ion-icon>
+                                    <a href="inviteUser.html">Invite Friends</a>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <ion-icon name="log-out-outline" class="icons"></ion-icon>
+                                    <a href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                </nav>
+            </header>
+
+            <section id="section">
+                <div class="timelineCont">
+                    <div class="timelineContInfo">
+                        <h3>Team Timeline</h3>
+                        <p>Create and complete tasks using boards</p>
+                    </div>
+                    <div class="timelineContBtn">
+                        <div class="dropdown">
+                            <button id="dateBtn">
+                                <i class="material-symbols-outlined icon">calendar_month</i>                            
+                                Nov, 2022
+                                <ul id="dropdownMenuTeam">
+                                    <p>Select month</p>
+                                    <div class="selectCont">
+                                        <i class="material-symbols-outlined icon">calendar_month</i>
+                                        <select>
+                                            <option>November</option>
+                                        </select>
+                                    </div>
+                                    <p>Select year</p>
+                                    <div class="selectCont">
+                                        <i class="material-symbols-outlined icon">calendar_month</i>
+                                        <select>
+                                            <option>2022</option>
+                                        </select>
+                                    </div>
+                                </ul>
+                            </button>
+                        </div>
+                        </button>
+                        <div class="dropdown">
+                            <button id="inviteBtn">
+                                <ion-icon name="add-outline"></ion-icon>
+                                Invite
+                            </button>
+                        </div>
+                        <div class="dropdown">
+                            <button id="taskBtn">
+                                <ion-icon name="add-outline"></ion-icon>
+                                Add Task
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="nubers">
+                    <p>21</p>
+                    <p>22</p>
+                    <p>23</p>
+                    <p>24</p>
+                    <p>25</p>
+                    <p>26</p>
+                </div>
+                <div class="tesksCont">
+                    <div class="tesksChild">
+                        <div class="tesksDiv">
+                            <div class="tesksDivInfo">
+                                <input type="checkbox" checked />
+                                <h4>Design UX research for landing page</h4>
+                            </div>
+                            <div class="tesksDivIcon">
+                                <i class="material-symbols-outlined icon">account_circle</i>                            
+                                <p>21 Oct to 24 Oct, 2022</p>
+                            </div>
+                        </div>
+                        <div class="tesksDiv">
+                            <div class="tesksDivInfo">
+                                <input type="checkbox" />
+                                <h4>Start UI Design once UX is done</h4>
+                            </div>
+                            <div class="tesksDivIcon">
+                                <i class="material-symbols-outlined icon">account_circle</i>                            
+                                    <p>21 Oct to 24 Oct, 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="userLine">
+                            <i class="material-symbols-outlined icon">account_circle</i>                            
+                            <p>Henry Lucas</p>
+                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                        </div>
+                    <div class="line"></div>
+                    <div class="tesksChildTwo">
+                        <div class="tesksDiv">
+                            <div class="tesksDivInfo">
+                                <input type="checkbox" />
+                                <h4>Workon instagram marketing</h4>
+                            </div>
+                            <div class="tesksDivIcon">
+                                <i class="material-symbols-outlined icon">account_circle</i>                            
+                                <p>21 Oct to 24 Oct, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tesksChildTree">
+                        <div class="tesksDiv">
+                            <div class="tesksDivInfo">
+                                <input type="checkbox" />
+                                <h4>Facebook and instagram ads for new mobile app</h4>
+                            </div>
+                            <div class="tesksDivIcon">
+                                <i class="material-symbols-outlined icon">account_circle</i>                            
+                                <p>21 Oct to 24 Oct, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userLine">
+                        <i class="material-symbols-outlined icon">account_circle</i>                            
+                        <p>Johson Williamson</p>
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                    </div>
+                    <div class="line"></div>
+                    <div class="tesksChildFour">
+                        <div class="tesksDiv">
+                            <div class="tesksDivInfo">
+                                <input type="checkbox" />
+                                <h4>Design Merketing Graphics</h4>
+                            </div>
+                            <div class="tesksDivIcon">
+                                <i class="material-symbols-outlined icon">account_circle</i>                            
+                                <p>21 Oct to 24 Oct, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userLine">
+                        <i class="material-symbols-outlined icon">account_circle</i>                            
+                        <p>Charlotte Amlia</p>
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                    </div>
+                    <div class="line"></div>
+                    <div class="tesksChildFive">
+                        <div class="tesksDiv">
+                            <div class="tesksDivInfo">
+                                <input type="checkbox" />
+                                <h4>Develope Mobile app V1</h4>
+                            </div>
+                            <div class="tesksDivIcon">
+                                <i class="material-symbols-outlined icon">account_circle</i>                            
+                                <p>21 Oct to 24 Oct, 2022</p>
+                            </div>
+                        </div>
+                        <div class="tesksDiv">
+                            <div class="tesksDivInfo">
+                                <input type="checkbox" />
+                                <h4>Test mobile app with our customers</h4>
+                            </div>
+                            <div class="tesksDivIcon">
+                                <i class="material-symbols-outlined icon">account_circle</i>                            
+                                <p>21 Oct to 24 Oct, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userLine">
+                        <i class="material-symbols-outlined icon">account_circle</i>                            
+                        <p>Olivia Thomas</p>
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                    </div>
+                    <div class="line"></div>
+                    <div class="cont">
+                        <p>Add more members by <span>+ Inviting</span> and assign task to anyone</p>
+                    </div>
+                </div>
+                <div id="sectionTwo"></div>
+            </section>
+        </div>
+
+        <section id="inviteSection">
+            <div class="createTasksInvite">
+                <div class="title">
+                    <h3>Invite members to timeline</h3>
+                    <ion-icon name="close-outline" id="closeIconInvite"></ion-icon>
+                </div>
+                <div class="line"></div>
+                <div class="personCont">
+                    <div class="personChild">
+                        <ion-icon name="person-circle-outline" class="personIcon"></ion-icon>
+                        <div class="personInfo">
+                            <h4>Johson Williamson</h4>
+                            <p>UX Designer</p>
+                        </div>
+                    </div>
+                    <li>3hrs ago</li>
+                </div>
+                <div class="personCont">
+                    <div class="personChild">
+                        <ion-icon name="person-circle-outline" class="personIcon"></ion-icon>
+                        <div class="personInfo">
+                            <h4>Lila Juliana</h4>
+                            <p>Graphics designer</p>
+                        </div>
+                    </div>
+                    <li>3hrs ago</li>
+                </div>
+                <div class="personCont">
+                    <div class="personChild">
+                        <ion-icon name="person-circle-outline" class="personIcon"></ion-icon>
+                        <div class="personInfo">
+                            <h4> Olivia Thomas</h4>
+                            <p>Senior Developer</p>
+                        </div>
+                    </div>
+                    <li>3hrs ago</li>
+                </div>
+                <div class="personCont">
+                    <div class="personChild">
+                        <ion-icon name="person-circle-outline" class="personIcon"></ion-icon>
+                        <div class="personInfo">
+                            <h4>Liam Benjamin</h4>
+                            <p>Senior Developer</p>
+                        </div>
+                    </div>
+                    <li>3hrs ago</li>
+                </div>
+                <div class="personCont">
+                    <div class="personChild">
+                        <ion-icon name="person-circle-outline" class="personIcon"></ion-icon>
+                        <div class="personInfo">
+                            <h4>Henry Lucas</h4>
+                            <p>Senior Developer</p>
+                        </div>
+                    </div>
+                    <li>3hrs ago</li>
+                </div>
+                <div class="personCont">
+                    <div class="personChild">
+                        <ion-icon name="person-circle-outline" class="personIcon"></ion-icon>
+                        <div class="personInfo">
+                            <h4>Kane Martin</h4>
+                            <p>Senior Developer</p>
+                        </div>
+                    </div>
+                    <li>3hrs ago</li>
+                </div>
+            </div>
+        </section>
+
+        <section id="tasksSection">
+            <div class="createTasksCont">
+                <div class="title">
+                    <h3>Create Timeline Task</h3>
+                    <ion-icon name="close-outline" id="closeIconTasks"></ion-icon>
+                </div>
+                <div class="line"></div>
+                <form id="form">
+                    <div class="child">
+                        <label>Task Name </label>
+                        <input type="text" placeholder="Task Name">
+                    </div>
+                    <div class="timeCont">
+                        <div class="time">
+                            <label for="">Start Date </label>
+                            <input type="date">
+                        </div>
+                        <div class="time">
+                            <label for="">End Date </label>
+                            <input type="date">
+                        </div>
+                    </div>
+                    <div class="child">
+                        <label>Assign Members</label>
+                        <input type="email" placeholder="Assign members">
+                    </div>
+                    <button>Create</button>
+                </form>
+            </div>
+        </section>
+        <script src="./js//timeline.js"></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js-"
+        ></script>
+    </body>
+</html>

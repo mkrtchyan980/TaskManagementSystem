@@ -1,0 +1,915 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  transition: 500ms;
+}
+
+.conts {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.conts #aside {
+  width: 5%;
+  height: 100vh;
+  border-right: 0.5px solid #d6d6d6;
+  position: fixed;
+  left: 0;
+  padding: 10px;
+  overflow: hidden;
+  transition: 500ms;
+  z-index: 1;
+  background-color: #fff;
+}
+.conts #aside:hover {
+  width: 20%;
+  overflow: hidden;
+}
+.conts #aside #navCont {
+  display: flex;
+}
+.conts #aside #navCont #navLeft {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.conts #aside #navCont #navLeft .title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 15px 15px 0;
+}
+.conts #aside #navCont #navLeft .title .icon {
+  color: #603ecc;
+  font-size: 30px;
+  transform: rotate(30deg);
+}
+.conts #aside #navCont #navLeft .menu {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+}
+.conts #aside #navCont #navLeft .menu .menuList :hover {
+  background-color: #f1f1f1;
+}
+.conts #aside #navCont #navLeft .menu .menuList a {
+  border-radius: 5px;
+  transition: 0.5s;
+  display: flex;
+  padding: 15px 0 15px 10px;
+  align-items: center;
+  gap: 10px;
+  color: #6b6e71;
+  text-decoration: none;
+}
+.conts #aside #navCont #navLeft .menu .menuList a .icon {
+  font-size: 20px;
+}
+.conts #aside #navCont #mainNav {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.conts #aside #navCont #mainNav .logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 15px 15px 10px;
+}
+.conts #aside #navCont #mainNav .logo .icon {
+  color: #603ecc;
+  font-size: 30px;
+  transform: rotate(30deg);
+}
+.conts #aside #navCont #mainNav .menu {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+}
+.conts #aside #navCont #mainNav .menu .menuList .icon {
+  font-size: 20px;
+  color: #6b6e71;
+  padding: 15px 0 9px 10px;
+}
+.conts #header {
+  width: 95%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: fixed;
+  background-color: #fff;
+  border-bottom: 0.5px solid #d6d6d6;
+}
+.conts #header #nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.conts #header #nav .menu {
+  width: 45%;
+  list-style: none;
+}
+@media screen and (max-width: 500px) {
+  .conts #header #nav .menu {
+    width: 30%;
+  }
+}
+.conts #header #nav .menu .menuList input {
+  border-radius: 5px;
+  padding: 7px 20px;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #ededed;
+}
+.conts #header #nav .logo h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #6b6e71;
+  text-decoration: none;
+  font-weight: 500;
+}
+@media screen and (max-width: 500px) {
+  .conts #header #nav .logo h3 {
+    font-size: 16px;
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .conts #header #nav .logo h3 {
+    font-size: 14px;
+  }
+}
+.conts #header #nav .cont {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 500px) {
+  .conts #header #nav .cont {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .conts #header #nav .cont {
+    gap: 10px;
+  }
+}
+.conts #header #nav .cont .menuList {
+  list-style: none;
+  font-size: 25px;
+  color: #6b6e71;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  .conts #header #nav .cont .menuList {
+    font-size: 20px;
+  }
+}
+.conts #header #nav .cont .menuList #dropdownMenuAdd {
+  min-width: 250px;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .conts #header #nav .cont .menuList #dropdownMenuAdd {
+    min-width: 220px;
+  }
+}
+.conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+.conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+.conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList a li {
+  list-style: disc;
+  color: #6b6e71;
+}
+.conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList p {
+  font-size: 13px;
+  padding: 2px 0;
+}
+.conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList p span {
+  color: #603ecc;
+}
+.conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList .icon {
+  font-size: 20px;
+  padding: 7px;
+  color: #603ecc;
+  background-color: #f3f1f9;
+  border-radius: 50%;
+}
+.conts #header #nav .cont .menuList #dropdownMenuAdd .dropdownMenuList a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+.conts #header #nav .cont .menuList #dropdownMenuAdd button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
+.conts #header #nav .cont .menuList #dropdownMenuAdd button a {
+  color: #6b6e71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot {
+  min-width: 300px;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .conts #header #nav .cont .menuList #dropdownMenuNot {
+    min-width: 280px;
+  }
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot .line {
+  width: 100%;
+  border: 1px solid #d6d6d6;
+  margin: 10px 0;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .info a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .info a li {
+  list-style: disc;
+  color: #6b6e71;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .info p {
+  font-size: 13px;
+  padding: 2px 0;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .info p span {
+  color: #603ecc;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .icons {
+  font-size: 23px;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList .icon {
+  font-size: 20px;
+  padding: 7px;
+  color: #603ecc;
+  background-color: #f3f1f9;
+  border-radius: 50%;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot .dropdownMenuList a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
+.conts #header #nav .cont .menuList #dropdownMenuNot button a {
+  color: #6b6e71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.conts #header #nav .cont .menuList #dropdownMenu {
+  min-width: 250px;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  display: none;
+}
+.conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+.conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+.conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList a li {
+  list-style: disc;
+  color: #6b6e71;
+}
+.conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList p {
+  font-size: 13px;
+  padding: 2px 0;
+}
+.conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList p span {
+  color: #603ecc;
+}
+.conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList .icon {
+  font-size: 20px;
+  padding: 7px;
+  color: #603ecc;
+  background-color: #f3f1f9;
+  border-radius: 50%;
+}
+.conts #header #nav .cont .menuList #dropdownMenu .dropdownMenuList a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  gap: 25px;
+}
+.conts #header #nav .cont .menuList #dropdownMenu button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
+.conts #header #nav .cont .menuList #dropdownMenu button a {
+  color: #6b6e71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.conts #section {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+@media screen and (max-width: 885px) {
+  .conts #section {
+    width: 100%;
+  }
+}
+.conts #section .setupAccountCont {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #d6d6d6;
+  border-radius: 10px;
+}
+@media screen and (max-width: 400px) {
+  .conts #section .setupAccountCont {
+    width: 95%;
+  }
+}
+.conts #section .setupAccountCont .setupAccountChild {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+@media screen and (max-width: 420px) {
+  .conts #section .setupAccountCont .setupAccountChild {
+    flex-direction: column;
+  }
+}
+.conts #section .setupAccountCont .setupAccountChild .setupAccountChildInfo h4 {
+  font-weight: 700;
+  font-size: 16px;
+}
+.conts #section .setupAccountCont .setupAccountChild .setupAccountChildInfo p {
+  color: #6b6e71;
+  font-size: 15px;
+  padding: 5px 0;
+}
+.conts #section .setupAccountCont .setupAccountChild .btn button {
+  background-color: #eee9fd;
+  color: #6f47eb;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-weight: 550;
+}
+@media screen and (max-width: 420px) {
+  .conts #section .setupAccountCont .setupAccountChild .btn button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .conts #section .setupAccountCont .setupAccountChild .btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+.conts #section .setupAccountCont .line {
+  width: 95%;
+  margin: 0 auto;
+  border-top: 0.5px solid #d6d6d6;
+}
+.conts #section .setupAccountCont #setupAccountChild {
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-columns: auto auto auto auto;
+}
+@media screen and (max-width: 580px) {
+  .conts #section .setupAccountCont #setupAccountChild {
+    grid-template-columns: auto auto;
+  }
+}
+.conts #section .setupAccountCont #setupAccountChild .subjects {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+}
+@media screen and (max-width: 580px) {
+  .conts #section .setupAccountCont #setupAccountChild .subjects {
+    padding: 10px;
+  }
+}
+.conts #section .setupAccountCont #setupAccountChild .subjects .icons {
+  width: 37px;
+  height: 37px;
+  border: 1px solid #9b77f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #805ded;
+  font-size: 23px;
+}
+@media screen and (max-width: 400px) {
+  .conts #section .setupAccountCont #setupAccountChild .subjects .icons {
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .conts #section .setupAccountCont #setupAccountChild .subjects h2 {
+    font-size: 20px;
+  }
+}
+.conts #section .setupAccountCont #setupAccountChild .subjects .subjectsInfo p {
+  color: #6b6e71;
+  font-size: 14px;
+}
+.conts #section .note {
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-top: 20px;
+  gap: 20px;
+}
+@media screen and (max-width: 700px) {
+  .conts #section .note {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .conts #section .note {
+    width: 95%;
+  }
+}
+.conts #section .note .thingsCont {
+  height: 350px;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.conts #section .note .thingsCont::-webkit-scrollbar {
+  width: 5px;
+}
+.conts #section .note .thingsCont::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 10px;
+}
+@media screen and (max-width: 400px) {
+  .conts #section .note .thingsCont {
+    padding: 15px 10px;
+  }
+}
+.conts #section .note .thingsCont .thingsChild {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.conts #section .note .thingsCont .thingsChild .thingsInfo p {
+  color: #6b6e71;
+  font-size: 15px;
+  padding: 5px 0;
+}
+.conts #section .note .thingsCont .thingsChild #thingsBtn {
+  display: flex;
+  align-items: center;
+}
+.conts #section .note .thingsCont .thingsChild #thingsBtn button {
+  background-color: #eee9fd;
+  color: #6f47eb;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-weight: 550;
+  margin-top: 5px;
+}
+.conts #section .note .thingsBtns {
+  padding-top: 15px;
+}
+.conts #section .note .thingsBtns button {
+  border: 0.5px solid #6b6e71;
+  padding: 7px 10px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #5c5f62;
+  background-color: #fff;
+}
+.conts #section .note .thingsBtns :hover {
+  background-color: #ededed;
+}
+.conts #section .note .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.conts #section .note .list img {
+  width: 40%;
+  height: 40%;
+}
+.conts #section .note .list p {
+  font-size: 15px;
+  margin-top: 5px;
+  color: #6b6e71;
+}
+.conts #section .note .list p span {
+  color: #603ecc;
+}
+.conts #section .note .reportCont {
+  height: 350px;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.conts #section .note .reportCont::-webkit-scrollbar {
+  width: 5px;
+}
+.conts #section .note .reportCont::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 10px;
+}
+.conts #section .note .reportCont .reportChild {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.conts #section .note .reportCont .reportChild .reportInfo p {
+  color: #6b6e71;
+  font-size: 15px;
+  padding: 5px 0;
+}
+.conts #section .note .reportCont .reportList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 58px;
+}
+.conts #section .note .reportCont .reportList img {
+  width: 40%;
+  height: 40%;
+}
+.conts #section .note .reportCont .reportList p {
+  font-size: 15px;
+  margin-top: 5px;
+  color: #6b6e71;
+}
+.conts #section .note .reportCont .reportList p span {
+  color: #603ecc;
+}
+.conts #section .teamCont {
+  width: 90%;
+  min-height: 200px;
+  border: 0.5px solid #d6d6d6;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding-bottom: 30px;
+}
+.conts #section .teamCont .teamChild {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+@media screen and (max-width: 350px) {
+  .conts #section .teamCont .teamChild {
+    padding: 20px 10px;
+  }
+}
+.conts #section .teamCont .teamChild .teamInfo p {
+  color: #6b6e71;
+  font-size: 15px;
+  padding: 5px 0;
+}
+.conts #section .teamCont .teamChild .teamBtn {
+  display: flex;
+  align-items: center;
+}
+.conts #section .teamCont .teamChild .teamBtn button {
+  background-color: #eee9fd;
+  color: #6f47eb;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-weight: 550;
+}
+.conts #section .teamCont .teamLineCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.conts #section .teamCont .teamLineCont img {
+  width: 40%;
+  height: 40%;
+}
+.conts #section .teamCont .teamLineCont p {
+  font-size: 15px;
+  margin-top: 5px;
+  color: #6b6e71;
+}
+.conts #section .teamCont .teamLineCont p span {
+  color: #603ecc;
+}
+.conts #sectionTwo {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3843137255);
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+#tasksSection {
+  width: 100%;
+  display: none;
+  position: relative;
+  top: -950px;
+}
+@media screen and (max-width: 810px) {
+  #tasksSection {
+    top: -900px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #tasksSection {
+    top: -1300px;
+  }
+}
+#tasksSection .createTasksCont {
+  width: 30%;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+}
+@media screen and (max-width: 840px) {
+  #tasksSection .createTasksCont {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 670px) {
+  #tasksSection .createTasksCont {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 550px) {
+  #tasksSection .createTasksCont {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 450px) {
+  #tasksSection .createTasksCont {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 385px) {
+  #tasksSection .createTasksCont {
+    width: 85%;
+  }
+}
+#tasksSection .createTasksCont .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#tasksSection .createTasksCont .title h3 {
+  font-weight: 550;
+}
+#tasksSection .createTasksCont .title #closeIconTasks {
+  font-size: 25px;
+  color: #6b6e71;
+}
+#tasksSection .createTasksCont .line {
+  width: 100%;
+  border: 1px solid #f1f1f1;
+  margin: 10px 0;
+}
+#tasksSection .createTasksCont #form .child {
+  display: flex;
+  flex-direction: column;
+}
+#tasksSection .createTasksCont #form .child label {
+  color: #6b6e71;
+  margin-top: 10px;
+}
+#tasksSection .createTasksCont #form .child input {
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: 1px solid #d6d6d6;
+  margin: 5px 0;
+  outline: none;
+}
+#tasksSection .createTasksCont #form .timeCont {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  margin-top: 10px;
+}
+#tasksSection .createTasksCont #form .timeCont .time label {
+  color: #6b6e71;
+  margin-top: 10px;
+}
+#tasksSection .createTasksCont #form .timeCont .time input {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: 1px solid #d6d6d6;
+  margin: 5px 0;
+  outline: none;
+}
+#tasksSection .createTasksCont #form .timeCont .time .inp {
+  padding: 6px 10px;
+}
+#tasksSection .createTasksCont #form button {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #000;
+  margin-top: 10px;
+  border: none;
+}
+
+#teamSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  position: relative;
+  top: -800px;
+}
+@media screen and (max-width: 405px) {
+  #teamSection {
+    top: -800px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #teamSection {
+    top: -1000px;
+  }
+}
+#teamSection .createTasksTeam {
+  width: 30%;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+}
+@media screen and (max-width: 840px) {
+  #teamSection .createTasksTeam {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 670px) {
+  #teamSection .createTasksTeam {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 550px) {
+  #teamSection .createTasksTeam {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 450px) {
+  #teamSection .createTasksTeam {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 385px) {
+  #teamSection .createTasksTeam {
+    width: 85%;
+  }
+}
+#teamSection .createTasksTeam .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#teamSection .createTasksTeam .title h3 {
+  font-weight: 550;
+}
+#teamSection .createTasksTeam .title #closeIconTeam {
+  font-size: 25px;
+  color: #6b6e71;
+}
+#teamSection .createTasksTeam .line {
+  width: 100%;
+  border: 1px solid #f1f1f1;
+  margin: 10px 0;
+}
+#teamSection .createTasksTeam #form .child {
+  display: flex;
+  flex-direction: column;
+}
+#teamSection .createTasksTeam #form .child label {
+  color: #6b6e71;
+  margin-top: 10px;
+}
+#teamSection .createTasksTeam #form .child input {
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: 1px solid #d6d6d6;
+  margin: 5px 0;
+  outline: none;
+}
+#teamSection .createTasksTeam #form button {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #000;
+  margin-top: 10px;
+  border: none;
+}/*# sourceMappingURL=homepage.css.map */

@@ -1,0 +1,886 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: 500ms;
+}
+
+$color: #6b6e71;
+$borderColor: #d6d6d6;
+$colorP: #603ecc;
+$bgcolor: #f1f1f1;
+$btn-color: #f3f1f9;
+
+.conts{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    #aside{
+        width: 5%;
+        height: 100vh;
+        border-right: 0.5px solid $borderColor;
+        position: fixed;
+        left: 0;
+        padding: 10px;
+        overflow: hidden;
+        transition: 500ms;
+        z-index: 1;
+        background-color: #fff;
+        &:hover{
+            width: 20%;
+            overflow: hidden;
+        }
+        #navCont{
+            display: flex;
+            #navLeft{
+                width: 100%;
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                .title{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 15px 15px 15px 0;
+                    .icon{
+                        color: $colorP;
+                        font-size: 30px;
+                        transform: rotate(30deg);
+                    }
+                }
+                .menu{
+                    width: 100%;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 55px;
+                    .menuList{
+                        :hover{
+                            background-color: $bgcolor;
+                        }
+                        a{
+                            border-radius: 5px;
+                            transition: 0.5s;
+                            display: flex;
+                            padding: 15px 0 15px 10px;
+                            align-items: center;
+                            gap: 10px;
+                            color: $color;
+                            text-decoration: none;
+                            .icon{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            #mainNav{
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                .logo{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 15px 15px 15px 10px;
+                    .icon{
+                        color: $colorP;
+                        font-size: 30px;
+                        transform: rotate(30deg);
+                    }
+                }
+                .menu{
+                    width: 100%;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 45px;
+                    .menuList{
+                        .icon{
+                            font-size: 20px;
+                            color: $color;
+                            padding: 15px 0 9px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #header{
+        width: 95%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        position: fixed;
+        background-color: #fff;
+        border-bottom: 0.5px solid $borderColor;
+        #nav{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px 0;
+            .menu{
+                width: 45%;
+                list-style: none;
+                @media screen and (max-width: 500px) {
+                    width: 30%;
+                }
+                .menuList{
+                input{
+                    border-radius: 5px;
+                    padding: 7px 20px;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    background-color: #ededed;
+                }
+            }
+        }
+        .logo{
+            h3{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                color: $color;
+                text-decoration: none;
+                font-weight: 500;
+                @media screen and (max-width: 500px) {
+                    font-size: 16px;
+                    gap: 5px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .cont{
+            display: flex;
+            gap: 30px;
+            @media screen and (max-width: 500px) {
+                gap: 15px;
+            }
+            @media screen and (max-width: 350px) {
+                gap: 10px;
+            }
+            .menuList{
+                list-style: none;
+                font-size: 25px;
+                color: $color;
+                position: relative;
+                @media screen and (max-width: 500px) {
+                    font-size: 20px;
+                }
+                #dropdownMenuAdd{
+                    min-width: 250px;
+                    border: 1px solid $borderColor;
+                    border-radius: 5px;
+                    background-color: #fff;
+                    padding: 15px;
+                    position: absolute;
+                    top: 35px;
+                    right: 0;
+                    display: none;
+                    @media screen and (max-width: 600px) {
+                        min-width: 220px;
+                    }
+                    .dropdownMenuList{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin: 15px 0;
+                        a{
+                            color: #000;
+                            font-size: 15px;
+                            text-decoration: none;
+                            display: flex;
+                            gap: 25px;
+                            li{
+                                list-style: disc;
+                                color: $color;
+                            }
+                        }
+                        p{
+                            font-size: 13px;
+                            padding: 2px 0;
+                            span{
+                                color: $colorP;
+                            }
+                        }
+                        .icon{
+                            font-size: 20px;
+                            padding: 7px;
+                            color: $colorP;
+                            background-color: $btn-color;
+                            border-radius: 50%;
+                        }
+                        a{
+                            color: #000;
+                            font-size: 15px;
+                            text-decoration: none;
+                            display: flex;
+                            gap: 25px;
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        border-radius: 8px;
+                        padding: 10px;
+                        border: none;
+                        a{
+                            color: $color;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                #dropdownMenuNot{
+                    min-width: 300px;
+                    border: 1px solid $borderColor;
+                    border-radius: 5px;
+                    background-color: #fff;
+                    padding: 15px;
+                    position: absolute;
+                    top: 35px;
+                    right: 0;
+                    display: none;
+                    @media screen and (max-width: 600px) {
+                        min-width: 280px;
+                    }
+                    .line{
+                        width: 100%;
+                        border: 1px solid $borderColor;
+                        margin: 10px 0;
+                    }
+                    .dropdownMenuList{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin: 15px 0;
+                        .info{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            a{
+                                color: #000;
+                                font-size: 15px;
+                                text-decoration: none;
+                                display: flex;
+                                gap: 25px;
+                                li{
+                                    list-style: disc;
+                                    color: $color;
+                                }
+                            }
+                            p{
+                                font-size: 13px;
+                                padding: 2px 0;
+                                span{
+                                    color: $colorP;
+                                }
+                            }
+                        }
+                            .icons{
+                                font-size: 23px;
+                        }
+                        .icon{
+                            font-size: 20px;
+                            padding: 7px;
+                            color: $colorP;
+                            background-color: $btn-color;
+                            border-radius: 50%;
+                        }
+                        a{
+                            color: #000;
+                            font-size: 15px;
+                            text-decoration: none;
+                            display: flex;
+                            gap: 25px;
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        border-radius: 8px;
+                        padding: 10px;
+                        border: none;
+                        a{
+                            color: $color;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                #dropdownMenu{
+                    min-width: 250px;
+                    border: 1px solid $borderColor;
+                    border-radius: 5px;
+                    background-color: #fff;
+                    padding: 15px;
+                    position: absolute;
+                    top: 35px;
+                    right: 0;
+                    display: none;
+                    .dropdownMenuList{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin: 15px 0;
+                        a{
+                            color: #000;
+                            font-size: 15px;
+                            text-decoration: none;
+                            display: flex;
+                            gap: 25px;
+                            li{
+                                list-style: disc;
+                                color: $color;
+                            }
+                        }
+                        p{
+                            font-size: 13px;
+                            padding: 2px 0;
+                            span{
+                                color: $colorP;
+                            }
+                        }
+                        .icon{
+                            font-size: 20px;
+                            padding: 7px;
+                            color: $colorP;
+                            background-color: $btn-color;
+                            border-radius: 50%;
+                        }
+                        a{
+                            color: #000;
+                            font-size: 15px;
+                            text-decoration: none;
+                            display: flex;
+                            gap: 25px;
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        border-radius: 8px;
+                        padding: 10px;
+                        border: none;
+                        a{
+                            color: $color;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+    @media screen and (max-width: 885px) {
+        width: 100%;
+    }
+    .setupAccountCont{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        border: 0.5px solid $borderColor;
+        border-radius: 10px;
+        @media screen and (max-width: 400px) {
+            width: 95%;
+        }
+        .setupAccountChild{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            @media screen and (max-width: 420px) {
+                flex-direction: column;
+            }
+            .setupAccountChildInfo{
+                h4{
+                    font-weight: 700;
+                    font-size: 16px;   
+                }
+                p{
+                    color: $color;
+                    font-size: 15px;
+                    padding: 5px 0;
+                }
+            }
+            .btn{
+                button{
+                    background-color: #eee9fd;
+                    color: #6f47eb;
+                    border: none;
+                    padding: 7px 10px;
+                    border-radius: 5px;
+                    font-weight: 550;
+                    @media screen and (max-width: 420px) {
+                        width: 100%;
+                    }
+                }
+                @media screen and (max-width: 420px) {
+                    margin-top: 10px;
+                    width: 100%;
+                }
+            }
+        }
+        .line{
+            width: 95%;
+            margin: 0 auto;
+            border-top: 0.5px solid $borderColor;
+        }
+        #setupAccountChild{
+            display: grid;
+            justify-content: space-around;
+            align-items: center;
+            grid-template-columns: auto auto auto auto;
+            @media screen and (max-width: 580px) {
+                grid-template-columns: auto auto;
+            }
+            .subjects{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 20px 10px;
+                @media screen and (max-width: 580px) {
+                    padding: 10px;
+                }
+                .icons{
+                    width: 37px;
+                    height: 37px;
+                    border: 1px solid  #9b77f1;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #805ded;
+                    font-size: 23px;
+                    @media screen and (max-width: 400px) {
+                        font-size: 20px;
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+                h2{
+                    @media screen and (max-width: 400px) {
+                        font-size: 20px;
+                    }
+                }
+                .subjectsInfo{
+                    p{
+                        color: $color; 
+                        font-size: 14px;
+                    }
+                    
+                }
+            }
+        }
+    }
+    .note{
+        width: 90%;
+        display: grid;
+        grid-template-columns: auto auto;
+        padding-top: 20px;
+        gap: 20px;
+        @media screen and (max-width: 700px) {     
+            display: grid;
+            grid-template-columns: auto;
+        }
+        @media screen and (max-width: 400px) {
+            width: 95%;
+        }
+        .thingsCont{
+            height: 350px;
+            border: 1px solid $borderColor;
+            border-radius: 10px;
+            padding: 20px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #c5c5c5; 
+                border-radius: 10px;
+            }
+            @media screen and (max-width: 400px) {
+                padding: 15px 10px;
+            }
+            .thingsChild{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .thingsInfo{
+                    p{
+                        color: $color;
+                        font-size: 15px;
+                        padding: 5px 0;
+                    }
+                }
+                #thingsBtn{
+                    display: flex;
+                    align-items: center;
+                    button{
+                        background-color: #eee9fd;
+                        color: #6f47eb;
+                        border: none;
+                        padding: 7px 10px;
+                        border-radius: 5px;
+                        font-weight: 550;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+        .thingsBtns{
+            padding-top: 15px;
+            button{
+                border: 0.5px solid $color;
+                padding: 7px 10px;
+                border-radius: 5px;
+                transition: 0.5s;
+                color: #5c5f62;
+                background-color: #fff;
+            }
+            :hover{
+                background-color: #ededed;
+            }
+        }
+        .list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            img{
+                width: 40%;
+                height: 40%
+            };
+            p{
+                font-size: 15px;
+                margin-top: 5px;
+                color: $color;
+                span{
+                    color: $colorP;
+                }
+            }
+        }
+        .reportCont{
+            height: 350px;
+            border: 1px solid $borderColor;
+            border-radius: 10px;
+            padding: 20px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #c5c5c5; 
+                border-radius: 10px;
+            }
+            .reportChild{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .reportInfo{
+                    p{
+                        color: $color;
+                        font-size: 15px;
+                        padding: 5px 0;
+                    }
+                }
+            }
+            .reportList{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 58px;
+                img{
+                    width: 40%;
+                    height: 40%
+                };
+                p{
+                    font-size: 15px;
+                    margin-top: 5px;
+                    color: $color;
+                    span{
+                        color: $colorP;
+                    }
+                }
+            }
+        }
+    }
+    .teamCont{
+        width: 90%;
+        min-height: 200px;
+        border: 0.5px solid $borderColor;
+        border-radius: 10px;
+        margin: 20px 0;
+        padding-bottom: 30px;
+        .teamChild{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            @media screen and (max-width: 350px) {
+                padding: 20px 10px;
+            }
+            .teamInfo{
+                p{
+                    color: $color;
+                    font-size: 15px;
+                    padding: 5px 0;
+                }
+            }
+            .teamBtn{
+                display: flex;
+                align-items: center;
+                button{
+                        background-color: #eee9fd;
+                        color: #6f47eb;
+                        border: none;
+                        padding: 7px 10px;
+                        border-radius: 5px;
+                        font-weight: 550;
+                    }
+                }
+            }
+            .teamLineCont{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 40%;
+                    height: 40%
+                };
+                p{
+                    font-size: 15px;
+                    margin-top: 5px;
+                    color: $color;
+                    span{
+                        color: $colorP;
+                    }
+                }
+            }
+        }
+    }
+    #sectionTwo{
+        width: 100%;
+        height: 100%;
+        background-color: #00000062;
+        position: absolute;
+        top: 0;
+        display: none;
+    }
+}
+
+
+#tasksSection{
+    width: 100%;
+    display: none;
+    position: relative;
+    top: -950px;
+    @media screen and (max-width: 810px) {
+        top: -900px;
+    }
+    @media screen and (max-width: 700px) {
+        top: -1300px
+    }
+    .createTasksCont{
+        width: 30%;
+        background-color: #fff;
+        border: 1px solid $borderColor;
+        border-radius: 5px;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        @media screen and (max-width: 840px) {
+            width: 40%;
+        }
+        @media screen and (max-width: 670px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 550px) {
+            width: 60%;
+        }
+        @media screen and (max-width: 450px) {
+            width: 70%;
+        }
+        @media screen and (max-width: 385px) {
+            width: 85%;
+        }
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+                font-weight: 550;
+            }
+            #closeIconTasks{
+                font-size: 25px;
+                color: $color;
+            }
+        }
+        .line{
+            width: 100%;
+            border: 1px solid $bgcolor;
+            margin: 10px 0;
+        }
+        #form{
+            .child{
+                display: flex;
+                flex-direction: column;
+                label{
+                    color: $color;
+                    margin-top: 10px;
+                }
+                input{
+                    padding: 7px 10px;
+                    border-radius: 5px;
+                    border: 1px solid $borderColor;
+                    margin: 5px 0;
+                    outline: none;
+                }
+            }
+            .timeCont{
+                width: 100%;
+                gap: 10px;
+                display: flex;
+                margin-top: 10px;
+                .time{
+                    label{
+                        color: $color;
+                        margin-top: 10px;
+                    }
+                    input{
+                        width: 100%;
+                        padding: 7px 10px;
+                        border-radius: 5px;
+                        border: 1px solid $borderColor;
+                        margin: 5px 0;
+                        outline: none;
+                    }
+                    .inp{
+                        padding: 6px 10px;
+                        
+                    }
+                }
+            }
+            button{
+                width: 100%;
+                padding: 7px 10px;
+                border-radius: 5px;
+                color: #fff;
+                background-color: #000;
+                margin-top: 10px;
+                border: none;
+                
+            }
+        }
+    }
+}
+
+#teamSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: relative;
+    top: -800px;
+    @media screen and (max-width: 405px) {
+        top: -800px;
+    }
+    @media screen and (max-width: 400px) {
+        top: -1000px;
+    }
+    .createTasksTeam{
+        width: 30%;
+        background-color: #fff;
+        border: 1px solid $borderColor;
+        border-radius: 5px;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        @media screen and (max-width: 840px) {
+            width: 40%;
+        }
+        @media screen and (max-width: 670px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 550px) {
+            width: 60%;
+        }
+        @media screen and (max-width: 450px) {
+            width: 70%;
+        }
+        @media screen and (max-width: 385px) {
+            width: 85%;
+        }
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+                font-weight: 550;
+            }
+            #closeIconTeam{
+                font-size: 25px;
+                color: $color;
+            }
+        }
+        .line{
+            width: 100%;
+            border: 1px solid $bgcolor;
+            margin: 10px 0;
+        }
+        #form{
+            .child{
+                display: flex;
+                flex-direction: column;
+                label{
+                    color: $color;
+                    margin-top: 10px;
+                }
+                input{
+                    padding: 7px 10px;
+                    border-radius: 5px;
+                    border: 1px solid $borderColor;
+                    margin: 5px 0;
+                    outline: none;
+                }
+            }
+            button{
+                width: 100%;
+                padding: 7px 10px;
+                border-radius: 5px;
+                color: #fff;
+                background-color: #000;
+                margin-top: 10px;
+                border: none;
+                
+            }
+        }
+    }
+}

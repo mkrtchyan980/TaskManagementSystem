@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#header {
+  width: 100%;
+  padding: 20px 30px;
+  position: fixed;
+  background-color: #fff;
+}
+@media screen and (max-width: 400px) {
+  #header {
+    padding: 10px;
+  }
+}
+#header #nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+}
+@media screen and (max-width: 520px) {
+  #header #nav {
+    padding: 0;
+  }
+}
+#header #nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 520px) {
+  #header #nav .logo h3 {
+    font-size: 13px;
+    gap: 5px;
+  }
+}
+#header #nav .logo .icon {
+  font-size: 30px;
+  transform: rotate(30deg);
+  color: #603ecc;
+}
+@media screen and (max-width: 400px) {
+  #header #nav .logo .icon {
+    font-size: 25px;
+  }
+}
+#header #nav .btns {
+  display: flex;
+  gap: 15px;
+}
+@media screen and (max-width: 400px) {
+  #header #nav .btns {
+    gap: 5px;
+  }
+}
+#header #nav .btns .left-btn {
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f1f1f1;
+  color: #5c5f62;
+}
+@media screen and (max-width: 520px) {
+  #header #nav .btns .left-btn {
+    font-size: 10px;
+  }
+}
+#header #nav .btns .right-btn {
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+}
+@media screen and (max-width: 520px) {
+  #header #nav .btns .right-btn {
+    font-size: 10px;
+  }
+}
+
+#section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 150px 0;
+}
+#section #form {
+  width: 30%;
+  border-radius: 10px;
+  border: 1px solid #d6d6d6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+@media screen and (max-width: 1010px) {
+  #section #form {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 780px) {
+  #section #form {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 590px) {
+  #section #form {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 490px) {
+  #section #form {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 400px) {
+  #section #form {
+    width: 90%;
+  }
+}
+#section #form .signIn-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#section #form .signIn-title .icon {
+  font-size: 70px;
+  border-radius: 50%;
+  color: #603ecc;
+  padding-bottom: 15px;
+}
+#section #form .signIn-title p {
+  font-size: 15px;
+  color: #5c5f62;
+  padding: 10px;
+}
+#section #form .signIn-title p a {
+  text-decoration: none;
+  color: #603ecc;
+}
+#section #form .signIn-title .sign_up-cont {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d6d6d6;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+#section #form .signIn-title .sign_up-cont img {
+  width: 20px;
+  height: 20px;
+}
+#section #form .signIn-title .sign_up-cont .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#section #form .signIn-title .sign_up-cont .btn button {
+  background-color: #fff;
+  border: none;
+}
+#section #form .line {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 20px;
+}
+#section #form .line p {
+  color: #5c5f62;
+  font-size: 12px;
+}
+#section #form .line p::after {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 0.5px;
+  background: #d6d6d6;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+#section #form .line p::before {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 0.5px;
+  background: #d6d6d6;
+  right: 0;
+  top: 50%;
+  position: absolute;
+}
+#section #form .sign-in-child {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#section #form .sign-in-child label {
+  color: #5c5f62;
+  font-size: 14px;
+  padding: 20px 0 10px 2px;
+}
+#section #form .sign-in-child input {
+  border-radius: 5px;
+  border: 1px solid #d6d6d6;
+  padding: 10px 15px;
+  outline: none;
+}
+#section #form .sign-in-child .eyes-cont:hover {
+  cursor: pointer;
+}
+#section #form .sign-in-child .eyes-cont .eye {
+  position: absolute;
+  top: 57px;
+  right: 10px;
+  display: block;
+}
+#section #form .sign-in-child .eyes-cont .eye-off {
+  position: absolute;
+  top: 57px;
+  right: 10px;
+  display: none;
+}
+#section #form .login-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 5px;
+  border: black;
+}
+#section .superpage-team {
+  color: #5c5f62;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+#section .superpage-team p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  width: 11px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #5c5f62;
+}
+#section .superpage-team span {
+  font-size: 14px;
+}/*# sourceMappingURL=signin.css.map */

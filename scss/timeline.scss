@@ -1,0 +1,752 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: 500ms;
+}
+
+$color: #6b6e71;
+$borderColor: #d6d6d6;
+$colorP: #603ecc;
+$bgcolor: #f1f1f1;
+$btn-color: #f3f1f9;
+$asideWidth: 5%;
+$width: 100% - $asideWidth;
+.conts{
+    display: flex;
+    justify-content: flex-end;
+    #aside{
+        width: 5%;
+        height: 100vh;
+        border-right: 0.5px solid $borderColor;
+        position: fixed;
+        left: 0;
+        padding: 10px;
+        overflow: hidden;
+        transition: 500ms;
+        background-color: #fff;
+        z-index: 1;
+        &:hover{
+            width: 20%;
+            overflow: hidden;
+        }
+        #navCont{
+            display: flex;
+            #navLeft{
+                width: 100%;
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                .title{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 15px 15px 15px 0;
+                    .icon{
+                        color: $colorP;
+                        font-size: 30px;
+                        transform: rotate(30deg);
+                    }
+                }
+                .menu{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 55px;
+                    .menuList{
+                        :hover{
+                            background-color: $bgcolor;
+                        }
+                        a{
+                            border-radius: 5px;
+                            transition: 0.5s;
+                            display: flex;
+                            padding: 15px 0 15px 10px;
+                            align-items: center;
+                            gap: 10px;
+                            color: $color;
+                            text-decoration: none;
+                            .icon{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            #mainNav{
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                .logo{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 15px 15px 15px 10px;
+                    .icon{
+                        color: $colorP;
+                        font-size: 30px;
+                        transform: rotate(30deg);
+                    }
+                }
+                .menu{
+                    width: 100%;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 45px;
+                    .menuList{
+                        :hover{
+                            background-color: $bgcolor;
+                        }
+                        .icon{
+                            font-size: 20px;
+                            color: $color;
+                            padding: 15px 0 9px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #header{
+        width: 95%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        position: fixed;
+        background-color: #fff;
+        border-bottom: 0.5px solid $borderColor;
+        #nav{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px 0;
+            .menu{
+                width: 45%;
+                list-style: none;
+                .menuList{
+                input{
+                    border-radius: 5px;
+                    padding: 7px 20px;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    background-color: #ededed;
+                }
+            }
+        }
+        .logo{
+            h3{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                color: $color;
+                text-decoration: none;
+                font-weight: 500;
+            }
+        }
+        .cont{
+            display: flex;
+            gap: 30px;
+            .menuList{
+                list-style: none;
+                font-size: 25px;
+                color: $color;
+                position: relative;
+                #dropdownMenuAdd{
+                    min-width: 250px;
+                    border: 1px solid $borderColor;
+                    border-radius: 5px;
+                    background-color: #fff;
+                    padding: 15px;
+                    position: absolute;
+                    top: 35px;
+                    right: 0;
+                    display: none;
+                    .dropdownMenuList{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin: 15px 0;
+                        a{
+                            color: #000;
+                            font-size: 15px;
+                            text-decoration: none;
+                            display: flex;
+                            gap: 25px;
+                            li{
+                                list-style: disc;
+                                color: $color;
+                            }
+                        }
+                        p{
+                            font-size: 13px;
+                            padding: 2px 0;
+                            span{
+                                color: $colorP;
+                            }
+                        }
+                        .icon{
+                            font-size: 20px;
+                            padding: 7px;
+                            color: $colorP;
+                            background-color: $btn-color;
+                            border-radius: 50%;
+                        }
+                        a{
+                            color: #000;
+                            font-size: 15px;
+                            text-decoration: none;
+                            display: flex;
+                            gap: 25px;
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        border-radius: 8px;
+                        padding: 10px;
+                        border: none;
+                        a{
+                            color: $color;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                #dropdownMenuNot{
+                    min-width: 300px;
+                    border: 1px solid $borderColor;
+                    border-radius: 5px;
+                    background-color: #fff;
+                    padding: 15px;
+                    position: absolute;
+                    top: 35px;
+                    right: 0;
+                    display: none;
+                    .line{
+                        width: 100%;
+                        border: 1px solid $borderColor;
+                        margin: 10px 0;
+                    }
+                    .dropdownMenuList{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin: 15px 0;
+                        .info{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            a{
+                                color: #000;
+                                font-size: 15px;
+                                text-decoration: none;
+                                display: flex;
+                                gap: 25px;
+                                li{
+                                    list-style: disc;
+                                    color: $color;
+                                }
+                            }
+                            p{
+                                font-size: 13px;
+                                padding: 2px 0;
+                                span{
+                                    color: $colorP;
+                                }
+                            }
+                        }
+                            .icons{
+                                font-size: 23px;
+                        }
+                        .icon{
+                            font-size: 20px;
+                            padding: 7px;
+                            color: $colorP;
+                            background-color: $btn-color;
+                            border-radius: 50%;
+                        }
+                        a{
+                            color: #000;
+                            font-size: 15px;
+                            text-decoration: none;
+                            display: flex;
+                            gap: 25px;
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        border-radius: 8px;
+                        padding: 10px;
+                        border: none;
+                        a{
+                            color: $color;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                #dropdownMenu{
+                    min-width: 250px;
+                    border: 1px solid $borderColor;
+                    border-radius: 5px;
+                    background-color: #fff;
+                    padding: 15px;
+                    position: absolute;
+                    top: 35px;
+                    right: 0;
+                    display: none;
+                    .dropdownMenuList{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin: 15px 0;
+                        a{
+                            color: #000;
+                            font-size: 15px;
+                            text-decoration: none;
+                            display: flex;
+                            gap: 25px;
+                            li{
+                                list-style: disc;
+                                color: $color;
+                            }
+                        }
+                        p{
+                            font-size: 13px;
+                            padding: 2px 0;
+                            span{
+                                color: $colorP;
+                            }
+                        }
+                        .icon{
+                            font-size: 20px;
+                            padding: 7px;
+                            color: $colorP;
+                            background-color: $btn-color;
+                            border-radius: 50%;
+                        }
+                        a{
+                            color: #000;
+                            font-size: 15px;
+                            text-decoration: none;
+                            display: flex;
+                            gap: 25px;
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        border-radius: 8px;
+                        padding: 10px;
+                        border: none;
+                        a{
+                            color: $color;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#section{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 100px 0 0 0 ;
+    @media screen and (max-width: 885px) {
+        width: 100%;
+    }
+    .timelineCont{
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        @media screen and (max-width: 650px) {
+            flex-direction: column;
+            align-items: start;
+        }
+        @media screen and (max-width: 750px) {
+            width: 95%;
+        } 
+        .timelineContInfo{
+            p{
+                font-size: 15px;
+                color: $color;
+                padding: 10px 0;
+            }
+        }
+        .timelineContBtn{
+            display: flex;
+            align-items: center;
+            .material-icons{
+                font-size: 15px;
+            }
+            .dropdown{
+                #icon{
+                    font-size: 20px;
+                    color: $color;
+                }
+                #dropdownMenuTeam{
+                    width: 130px;
+                    position: absolute;
+                    right: -5px;
+                    top: 45px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid $borderColor;
+                    list-style: none;
+                    background-color: #fff;
+                    display: none;
+                    margin-top: 120px;
+                    margin-right: 245px;
+                        p{
+                            font-size: 13px;
+                            text-align: start;
+                        }
+                    .selectCont{
+                        padding: 5px;
+                        border: 1px solid $borderColor;
+                        border-radius: 5px;
+                        display: flex;
+                        margin: 10px 0;
+                        align-items: center;
+                        gap: 5px;
+                        select{
+                            border: none;
+                            font-size: 12px;
+                            option{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                #dateBtn{
+                    width: 110px;
+                    border: 1px solid $borderColor;
+                    padding: 8px 10px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $color;
+                    display: flex;
+                    gap: 5px;
+                }
+                #inviteBtn{
+                    width: 110px;
+                    padding: 8px 15px;
+                    background-color: #e1dcef;
+                    color: $colorP;
+                    font-weight: 550;
+                    border-radius: 5px;
+                    border: none;
+                    margin: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                    span{
+                        font-weight: 200;
+                    }
+                }
+
+                #taskBtn{
+                    width: 110px;
+                    padding: 8px 15px;
+                    color: #fff;
+                    background-color: #000;
+                    border-radius: 5px;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                    span{
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+    }
+    .nubers{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0;
+        padding: 5px 0;
+        background-color:$bgcolor;
+        color: $color;
+        border-radius: 5px;  
+        font-size: 14px;
+        font-weight: 550;
+        @media screen and (max-width: 750px) {
+            margin-left: 40px;
+            width: 95%;
+        }
+    }
+        .timeline{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin-top: 30px;
+            img{
+                width: 40%;
+                padding: 5px 0;
+            }
+            p{
+                font-size: 15px;
+                color: $color;
+                span{
+                    color: $colorP;
+                }
+            }
+        }
+        
+    }
+    #sectionTwo{
+        width: 100%;
+        height: 100%;
+        background-color: #00000062;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+
+    }
+}
+
+
+#inviteSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: relative;
+    top: -250px;
+    // @media screen and (max-width: 740px) {
+    //     top: -1000px;
+    // }
+    // @media screen and (max-width: 530px) {
+    //     top: -1100px;
+    // }
+    // @media screen and (max-width: 440px) {
+    //     top: -1200px;
+    // }
+    // @media screen and (max-width: 370px) {
+    //     top: -1300px;
+    // }
+    .createTasksInvite{
+        width: 30%;
+        background-color: #fff;
+        border: 1px solid $borderColor;
+        border-radius: 5px;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        @media screen and (max-width: 1000px) {
+            width: 40%;
+        }
+        @media screen and (max-width: 760px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 600px) {
+            width: 60%;
+        }
+        @media screen and (max-width: 510px) {
+            width: 70%;
+            padding: 20px 10px;
+        }
+        @media screen and (max-width: 430px) {
+            width: 85%;
+        }
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+                font-weight: 550;
+            }
+            #closeIconInvite{
+                font-size: 25px;
+                color: $color;
+            }
+        }
+        .line{
+            width: 100%;
+            border: 1px solid $bgcolor;
+            margin: 10px 0;
+        }
+        .personCont{
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            margin-top: 15px;
+            .personChild{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .personIcon{
+                    font-size: 40px;
+                    color: $color;
+                }
+                .personInfo{
+                    p{
+                        font-size: 15px;
+                        color: $color;
+                        padding: 5px 0;
+                    }
+                }
+            }
+            li{
+                font-size: 13px;
+                color: $color;
+                list-style: none;
+            }
+        }
+    }
+}
+
+
+#tasksSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: relative;
+    top: -250px;
+    // @media screen and (max-width: 740px) {
+    //     top: -1000px;
+    // }
+    // @media screen and (max-width: 530px) {
+    //     top: -1100px;
+    // }
+    // @media screen and (max-width: 440px) {
+    //     top: -1200px;
+    // }
+    // @media screen and (max-width: 370px) {
+    //     top: -1300px;
+    // }
+    .createTasksCont{
+        width: 30%;
+        background-color: #fff;
+        border: 1px solid $borderColor;
+        border-radius: 5px;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        @media screen and (max-width: 900px) {
+            width: 40%;
+        }
+        @media screen and (max-width: 700px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 600px) {
+            width: 60%;
+        }
+        @media screen and (max-width: 510px) {
+            width: 70%;
+            padding: 20px 10px;
+        }
+        @media screen and (max-width: 430px) {
+            width: 85%;
+        }
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+                font-weight: 550;
+            }
+            #closeIconTasks{
+                font-size: 25px;
+                color: $color;
+            }
+        }
+        .line{
+            width: 100%;
+            border: 1px solid $bgcolor;
+            margin: 10px 0;
+        }
+        #form{
+            .child{
+                display: flex;
+                flex-direction: column;
+                label{
+                    color: $color;
+                    margin-top: 10px;
+                    font-size: 15px;
+                }
+                input{
+                    padding: 7px 10px;
+                    border-radius: 5px;
+                    border: 1px solid $borderColor;
+                    margin: 5px 0;
+                    outline: none;
+                }
+            }
+            .timeCont{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 10px;
+                flex-wrap: wrap;
+                .time{
+                    width: 48%;
+                    display: flex;
+                    flex-direction: column;
+                    label{
+                        color: $color;
+                        margin-top: 10px;
+                    }
+                    input{
+                        width: 100%;
+                        padding: 7px 10px;
+                        border-radius: 5px;
+                        border: 1px solid $borderColor;
+                        margin: 5px 0;
+                        outline: none;
+                    }
+                    .inp{
+                        padding: 6px 10px;
+                        
+                    }
+                }
+            }
+            button{
+                width: 100%;
+                padding: 7px 10px;
+                border-radius: 5px;
+                color: #fff;
+                background-color: #000;
+                margin-top: 10px;
+                border: none;
+                
+            }
+        }
+    }
+}

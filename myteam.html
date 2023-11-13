@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="css/myteam.css" />
+        <title>Task Management System</title>
+    </head>
+    <body>
+        <div id="conts">
+            <aside id="aside">
+                <div id="navCont">
+                    <nav id="mainNav">
+                        <div class="logo">
+                            <ion-icon name="flash-outline" class="icon"></ion-icon>
+                        </div>
+                        <ul class="menu">
+                            <li class="menuList">
+                                <ion-icon name="home-outline" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="analytics" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="people-outline" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="albums-outline" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="chatbox-outline" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="calendar-clear-outline" class="icon"></ion-icon>
+                            </li>
+                            <li class="menuList">
+                                <ion-icon name="grid-outline" class="icon"></ion-icon>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav id="navLeft">
+                        <div class="title">
+                            <h3>Superpage</h3>
+                        </div>
+                        <ul class="menu">
+                            <li class="menuList">
+                                <a href="homePage.html">Home</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="dashboard.html">Dashboard</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="myTeam.html">Teams</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="board.html">Boards</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="inbox.html">Inbox</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="timeline.html">Timeline</a>
+                            </li>
+                            <li class="menuList">
+                                <a href="options.html">More Options</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>  
+            <header id="header">
+                <nav id="nav">
+                    <div class="logo">
+                        <h3>
+                            <ion-icon name="chevron-back-outline" id="mainIcon"></ion-icon
+                                >Inbox
+                            </h3>
+                        </div>
+                        <ul class="menu">
+                            <li class="menuList">
+                                <input type="search" placeholder="Search..." />
+                            </li>
+                        </ul>
+                        <div class="cont">
+                            <li class="menuList">
+                                <i class="material-icons" id="addIcon"> add_circle_outline</i>
+                                <ul id="dropdownMenuAdd">
+                                    <li class="dropdownMenuList">
+                                        <i class="material-icons icon"> check_box</i>
+                                        <div class="info">
+                                            <a href="#">Create Task</a>
+                                            <p>Create your tasks now</p>
+                                        </div>
+                                    </li>
+                                    <li class="dropdownMenuList">
+                                        <i class="material-icons icon">group</i>
+                                    <div class="info">
+                                        <a href="myTeam.html">Create Team</a>
+                                        <p>Create your team now</p>
+                                    </div>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <ion-icon name="albums-outline" class="icon"></ion-icon>
+                                    <div class="info">
+                                        <a href="board.html">Create Board</a>
+                                        <p>Create your board now</p>
+                                    </div>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <i class="material-icons icon">calendar_today</i>
+                                    <div class="info">
+                                        <a href="timeline.html">Create Timeline</a>
+                                        <p>Create your timeline now</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menuList">
+                            <ion-icon name="notifications-outline" id="notificationsIcon"></ion-icon>
+                            <ul id="dropdownMenuNot">
+                                <h5>Notification</h5>
+                                <div class="line"></div>
+                                <li class="dropdownMenuList">
+                                    <i class="material-icons icon">done</i>
+                                    <ul class="info">
+                                        <a href="#">Team Task Completed<li>Now</li></a>
+                                        <p>Johson comlpete <span>Development te...</span></p>
+                                    </ul>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <i class="material-icons icon">person_add</i>
+                                    <ul class="info">
+                                        <a href="#">Join Request<li>2h</li></a>
+                                        <p>Johson comlpete <span>Development te...</span></p>
+                                    </ul>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <i class="material-icons icon">person</i>
+                                    <ul class="info">
+                                        <a href="#">Accepted Team Request<li>1d</li></a>
+                                        <p>Johson comlpete <span>Development te...</span></p>
+                                    </ul>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <i class="material-icons icon">insert_drive_file</i>
+                                    <ul class="info">
+                                        <a href="#">Your Monthly Report<li>1w</li></a>
+                                        <p>Johson comlpete <span>Development te...</span></p>
+                                    </ul>
+                                </li>
+                                <button><a href="notification.html">See all <ion-icon name="chevron-forward-outline"></ion-icon></a></button>
+                            </ul>
+                        </li>
+                        <li class="menuList">
+                            <ion-icon name="person-circle-outline" id="personIcon"></ion-icon>
+                            <ul id="dropdownMenu">
+                                <li class="dropdownMenuList">
+                                    <ion-icon name="person-circle-outline" class="icons"></ion-icon>
+                                    <a href="profile.html">My Profile</a>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <ion-icon name="help-circle-outline" class="icons"></ion-icon>
+                                    <a href="help.html">Help and Support</a>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <ion-icon name="person-add-outline" class="icons"></ion-icon>
+                                    <a href="inviteUser.html">Invite Friends</a>
+                                </li>
+                                <li class="dropdownMenuList">
+                                    <ion-icon name="log-out-outline" class="icons"></ion-icon>
+                                    <a href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                </nav>
+            </header>
+            <section id="section">
+                <div class="teamsCont">
+                    <div class="teamsChild">
+                        <div class="teamsInfo">
+                            <h3>My Teams</h3>
+                            <p>32 Total teams are added</p>
+                        </div>
+                        <div class="btn">
+                            <button><ion-icon name="add-outline"></ion-icon>Team</button>
+                        </div>
+                    </div>
+                    <div class="team">
+                        <img src="/img/img/team.jpg" alt="">
+                        <h4>No teams has created</h4>
+                        <p>Click to add <span>New team</span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="/js/myTeam.js "></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js-"
+        ></script>
+    </body>
+</html>

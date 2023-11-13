@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.conts {
+    display: flex;
+    justify-content: flex-end;
+}
+.conts #header-left {
+    width: 20%;
+    height: 100vh;
+    border-right: 0.5px solid #d6d6d6;
+    position: fixed;
+    left: 0;
+}
+.conts #header-left #nav-left {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 30px 15px;
+}
+.conts #header-left #nav-left .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.conts #header-left #nav-left .logo .icon {
+    color: #603ecc;
+    font-size: 30px;
+    transform: rotate(30deg);
+}
+.conts #header-left #nav-left .menu {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+.conts #header-left #nav-left .menu .menu-list :hover {
+    background-color: #f1f1f1;
+}
+.conts #header-left #nav-left .menu .menu-list a {
+    border-radius: 5px;
+    transition: 0.5s;
+    display: flex;
+    padding: 15px 40px 15px 20px;
+    align-items: center;
+    gap: 10px;
+    color: #5c5f62;
+    text-decoration: none;
+}
+.conts #header-left #nav-left .menu .menu-list a .icon {
+    font-size: 20px;
+}
+.conts #header {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: fixed;
+    background-color: #fff;
+    border-bottom: 0.5px solid #d6d6d6;
+}
+.conts #header #nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.conts #header #nav .menu {
+    width: 25%;
+    list-style: none;
+}
+.conts #header #nav .menu .menu-list input {
+    border-radius: 5px;
+    padding: 7px 20px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #ededed;
+}
+.conts #header #nav .logo h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #5c5f62;
+    text-decoration: none;
+    font-weight: 500;
+}
+.conts #header #nav .cont {
+    display: flex;
+    gap: 30px;
+}
+.conts #header #nav .cont li {
+    list-style: none;
+    font-size: 25px;
+    color: #5c5f62;
+}
+.conts #section {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+.conts #section .settings-menu {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+    margin-top: 20px;
+}
+.conts #section .settings-menu .info {
+    padding-left: 10px;
+}
+.conts #section .settings-menu .info p {
+    font-size: 15px;
+    color: #5c5f62;
+    padding: 10px 0;
+}
+.conts #section .settings-menu ul {
+    width: 90%;
+    padding-top: 10px;
+}
+.conts #section .settings-menu ul li {
+    list-style: none;
+}
+.conts #section .settings-menu ul li :hover {
+    background-color: #f1f1f1;
+}
+.conts #section .settings-menu ul li a {
+    border-radius: 5px;
+    transition: 0.5s;
+    display: flex;
+    padding: 15px 40px 15px 20px;
+    align-items: center;
+    gap: 10px;
+    color: #5c5f62;
+    text-decoration: none;
+}
+.conts #section .settings-menu ul li a .icon {
+    font-size: 20px;
+}
+.conts #section .plan-cont {
+    width: 65%;
+}
+.conts #section .plan-cont .sub-plan-cont {
+    padding: 20px;
+    border: 0.5px solid #d6d6d6;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.conts #section .plan-cont .line {
+    width: 100%;
+    border: 0.5px solid #d6d6d6;
+    margin: 15px 0;
+}
+.conts #section .plan-cont .sub-plan-child {
+    display: flex;
+    gap: 10px;
+}
+.conts #section .plan-cont .sub-plan-child .icon {
+    color: #603ecc;
+    font-size: 30px;
+    transform: rotate(30deg);
+    border: 2px solid #603ecc;
+    border-radius: 50%;
+    padding: 5px;
+}
+.conts #section .plan-cont .sub-plan-child .info p {
+    font-size: 14px;
+    color: #5c5f62;
+    padding: 5px 0;
+}
+.conts #section .plan-cont .sub-plan-child .info .btn {
+    display: flex;
+    margin-top: 20px;
+}
+.conts #section .plan-cont .sub-plan-child .info .btn button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    transition: 0.5s;
+}
+.conts #section .plan-cont .sub-plan-child .info .btn button:hover {
+    background-color: #5c5f62;
+}
+.conts #section .plan-cont .sub-plan-child .info .btn p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 15px;
+    font-size: 14px;
+}
+.conts #section .plan-cont .sub-plan-child .info .btn p .help-icon {
+    font-size: 20px;
+}
+.conts #section .plan-cont .sub-plan-child-info p {
+    color: #5c5f62;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.conts #section .plan-cont .sub-plan-child-info input {
+    width: 100%;
+}
+.conts #section .plan-cont .sub-plan-childs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.conts #section .plan-cont .sub-plan-childs .info-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.conts #section .plan-cont .sub-plan-childs .info-cont .doc-icon {
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    color: #5c5f62;
+    background-color: #f1f1f1;
+}
+.conts #section .plan-cont .sub-plan-childs .info-cont .info p {
+    font-size: 14px;
+    color: #5c5f62;
+    padding: 5px 0;
+}
+.conts #section .plan-cont .sub-plan-childs button {
+    padding: 7px 20px;
+    border: none;
+    color: #603ecc;
+    border-radius: 5px;
+    background-color: #eee9fd;
+} /*# sourceMappingURL=billins.css.map */
